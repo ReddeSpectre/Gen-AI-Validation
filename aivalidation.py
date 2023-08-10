@@ -7,7 +7,7 @@ openai.api_key = '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'
 
 st.title("Data Validation with Generative AI Assistant")
 #create a dataframe for the raw data
-df = pd.read_csv(r'C:\Users\dooms\Sentiment Analysis\Gen. AI Data Validation\googleplaystore.csv')
+df = pd.read_csv(r'googleplaystore.csv')
 
 df_sample_art = df[df['Category'] == 'ART_AND_DESIGN'][:25]
 df_sample_games = df[df['Category'] == 'GAME'][:25]
