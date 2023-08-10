@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import openai
-openai.api_key = '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'
+openai.api_key = st.secrets["OPENAI_KEY"]
 
 st.title("Data Validation with Generative AI Assistant")
 #create a dataframe for the raw data
