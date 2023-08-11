@@ -60,7 +60,7 @@ st.write("When Checking this dataset for errors, the program returns the followi
 st.caption(incorrect_format_data)
 
 keyinput = 0
-while (keyinput = 0):
+while (keyinput == 0):
     #Get API Key from user
     st.write("In order to begin the demonstration, please input a valid OpenAI API Key:")
     key = st.text_input("API Key", "[Insert API Key Here]")
