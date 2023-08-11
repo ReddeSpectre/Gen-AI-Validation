@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import openai
-openai.api_key = st.secrets["OPENAI_KEY"]
+
 
 st.title("Data Validation with Generative AI Assistant")
 #create a dataframe for the raw data
@@ -57,6 +57,11 @@ incorrect_format_data = check_data_validity(trimmed_df_sample)
 #Pass the data to streamlit
 st.write("When Checking this dataset for errors, the program returns the following:")
 st.caption(incorrect_format_data)
+
+#Get API Key from user
+st.write("In order to continue with the demonstration, please input a valid OpenAI API Key:")
+key = st.text_input("API Key", "[Insert API Key Here]")
+openai.api_key = key
 
 #Function for generating responses with GPT-3
 def generate_gpt3_response(incorrect_format_data):
