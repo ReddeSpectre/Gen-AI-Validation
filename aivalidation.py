@@ -7,10 +7,6 @@ import openai
 
 st.title("Data Validation with Generative AI Assistant")
 
-#Get API Key from user
-st.write("In order to begin the demonstration, please input a valid OpenAI API Key:")
-key = st.text_input("API Key", "[Insert API Key Here]")
-
 #create a dataframe for the raw data
 df = pd.read_csv(r'googleplaystore.csv')
 
@@ -63,6 +59,13 @@ incorrect_format_data = check_data_validity(trimmed_df_sample)
 st.write("When Checking this dataset for errors, the program returns the following:")
 st.caption(incorrect_format_data)
 
+keyinput = 0
+while (keyinput = 0):
+    #Get API Key from user
+    st.write("In order to begin the demonstration, please input a valid OpenAI API Key:")
+    key = st.text_input("API Key", "[Insert API Key Here]")
+    keyinput = 1
+    
 openai.api_key = key
 
 #Function for generating responses with GPT-3
